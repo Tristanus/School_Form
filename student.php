@@ -49,6 +49,7 @@
 
 				public function SaveToDB($dblink){
 					$result = mysqli_query($dblink, "SELECT * FROM students WHERE studentnumber = $this->studentnumber");
+					
 			        $num_rows = mysqli_num_rows($result);
 			        if ($num_rows > 0){
 			            $sql = "UPDATE students SET firstname='$this->firstname', prefix='$this->prefix', lastname='$this->lastname', address='$this->address', postalcode='$this->postalcode', city='$this->city', email='$this->email' WHERE studentnumber = $this->studentnumber;";
@@ -70,7 +71,7 @@
 				}
 				}
 
-			}
+			} //end class Student
 
 			if(isset($_POST["submit"])){
 				$fn = $_POST["firstname"];
@@ -81,10 +82,12 @@
 				$ct = $_POST["city"];
 				$em = $_POST["email"];
 				$sn = $_POST["studentnumber"];
+
+				$s1 = new student($fn, $pf, $ln, $add, $zp, $ct, $em, $sn);
+				$s1->SaveToDB($dblink);
 			}
 
-			$s1 = new student($fn, $pf, $ln, $add, $zp, $ct, $em, $sn);
-			$s1->SaveToDB($dblink);
+			
 
 	$dblink->close();
 
