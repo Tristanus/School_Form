@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	outline: none;
+}
+
+@font-face {
+    font-family: Helvetica_light;
+    src: url(HelveticaNeue-UltraLight.otf);
+}
+
+@font-face {
+	font-family: Helvetica_bold;
+	src: url(HelveticaNeueLTStd-Th.otf);
+}
+
+h1{
+	text-align: center;
+	font-family: Helvetica_light;
+	font-size: 125px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+h2{
+	text-align: center;
+	font-family: Helvetica_light;
+	font-size: 30px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.form{
+	border-top: solid 1px black;
+	width: 850px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;	
+	padding-top: 50px;
+}	
+
+label{
+    font-family: Helvetica_bold;
+    font-size: 17px;
+}
+
+input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+input[type=submit] {
+    width: 50%;
+	background-color: white;
+	color: black;  
+    font-size: 15px;
+    padding: 12px 12px;
+    margin: 10px 8px;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 1.7%;
+}
+
+input[type=submit]:hover {
+	background-color: black;
+    color: white;
+	
+}	
+
+.footer{
+	width: 100%;
+	height: 25px;
+	border-top: 1px solid black;
+	margin-top: 150px;
+	text-align: center;
+	position: fixed;
+	padding-bottom: 5px;
+}
+
+.footer_text{
+	float: left;
+	margin-left: 43%;
+	margin-top: 5px;
+}
+
+.footer_link{
+	float: left;
+	margin-left: 7px;
+	margin-top: 5px;
+	color: black;
+}
